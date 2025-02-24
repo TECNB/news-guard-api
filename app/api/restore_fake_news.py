@@ -36,11 +36,6 @@ async def restore_fake_news(user_input: userContent):
         }}
     """
 
-    response = await generate_openai_response(system_content, user_content, stream=True)
+    response = await generate_openai_response(system_content, user_content, stream=False)
 
-    async def response_generator():
-        for chunk in response:
-            chunk_message = chunk.choices[0].delta.content
-            yield chunk_message
-
-    return StreamingResponse(response_generator(), media_type="text/plain")
+    return response.choices[0].message.content
