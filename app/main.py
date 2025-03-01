@@ -6,6 +6,7 @@ from app.api.show_fake_news import router as show_fake_news
 from app.api.show_hot_news import router as show_hot_news
 from app.api.restore_fake_news import router as restore_fake_news
 from app.api.verify_audio import router as verify_audio
+from app.api.knowledge import router as knowledge
 
 app = FastAPI()
 
@@ -25,3 +26,4 @@ app.include_router(show_fake_news)
 app.include_router(show_hot_news)
 app.include_router(restore_fake_news)
 app.include_router(verify_audio)
+app.include_router(knowledge)
