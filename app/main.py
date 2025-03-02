@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware  # 导入 CORSMiddleware
-from app.api.ask_fake_news import router as ask_fake_news_router
-from app.api.generate_chart import router as generate_chart_router
-from app.api.show_fake_news import router as show_fake_news
-from app.api.show_hot_news import router as show_hot_news
-from app.api.restore_fake_news import router as restore_fake_news
-from app.api.verify_audio import router as verify_audio
-from app.api.knowledge import router as knowledge
+from app.routers.ask_fake_news import router as ask_fake_news_router
+from app.routers.generate_chart import router as generate_chart_router
+from app.routers.show_fake_news import router as show_fake_news
+from app.routers.show_hot_news import router as show_hot_news
+from app.routers.restore_fake_news import router as restore_fake_news
+from app.routers.verify_audio import router as verify_audio
+from app.routers.knowledge import router as knowledge
 
 app = FastAPI()
 
