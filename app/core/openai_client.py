@@ -14,7 +14,8 @@ client = OpenAI(api_key=api_key, base_url=base_url)
 async def generate_openai_response(system_content: str, user_content: str, stream: bool):
     try:
         response = client.chat.completions.create(
-            model="deepseek-ai/DeepSeek-V3",
+            # model="deepseek-ai/DeepSeek-V3",
+            model="deepseek-chat",
             messages=[
                 {"role": "system", "content": system_content},
                 {"role": "user", "content": user_content},
